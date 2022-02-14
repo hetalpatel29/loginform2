@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGINFORM2</title>
+    <link rel="stylesheet" href="css/loginform2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <div class="loginformblock">
+        <div class="loginformainbox">
+            <div class="loginformbox" id="signin">
+                <div class="loginformsubbox bg_white">
+                    <h1 id="signinheading">Sign in</h1>
+                    <div class="logoblock">
+                        <div class="logobox">
+                            <i class="fab fa-facebook-f logo"></i>
+                        </div>
+                        <div class="logobox">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </div>
+                        <div class="logobox">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+
+                    </div>
+                    <div class="formblock">
+                        <p id="signinp">or use your account</p>
+                        <div class="txtboxdivision">
+                            <input type="text" placeholder="name" class="clientdetail" id="name">
+                            <input type="text" placeholder="Email" class="clientdetail">
+                            <input type="text" placeholder="Password" class="clientdetail">
+                        </div>
+
+
+
+
+                    </div>
+                    <p id="forgotpass">Forgot your password?</p>
+                    <button class="signinbutton" type="button" onclick="signin()" id="signinbtn">SIGN IN</button>
+
+                </div>
+            </div>
+            <div class="loginformbox" id="signup">
+                <div class="loginformsubbox bg_hotpink">
+                    <h2 id="signuph2">Hello,Friend </h2>
+                    <h3 id="signuph3">Enter your personal details and start journey with us</h3>
+                    <button class="signupbutton" type="button" onclick="signup()" id="signupbtn">SIGN UP</button>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let signin1 = document.getElementById("signin").style;
+        let signup1 = document.getElementById("signup").style;
+        let name = document.getElementById("name").style;
+        let signinheading1 = document.getElementById("signinheading");
+        let signinp = document.getElementById("signinp");
+        let signuph2 = document.getElementById("signuph2");
+        let signuph3 = document.getElementById("signuph3");
+        let signinbtn = document.getElementById("signinbtn");
+        let signupbtn = document.getElementById("signupbtn");
+        let forgotpass = document.getElementById("forgotpass").style;
+
+
+
+        function signup() {
+
+            signin1.left = "376px";
+            signup1.left = "-376px";
+            name.display = "block";
+            signinheading1.innerText = "Create Account";
+            signinp.innerText = "or use your email for registration";
+            signuph2.innerText = "Welcome Back";
+            signuph3.innerText = "To keep connected with us please login with your personal info";
+            signinbtn.innerText = "SIGN UP";
+            signupbtn.innerText = "SIGN IN";
+            forgotpass.marginTop = "90px";
+            signin1.transition = "2s";
+            signup1.transition = "2s";
+
+            signin1.borderRadius = "0% 10% 10% 0%";
+        }
+
+        function signin() {
+            signin1.left = "0px";
+
+            signup1.left = "0px";
+            name.display = "none";
+            signinheading1.innerText = "Sign in";
+            signinp.innerText = "or use your account";
+            signuph2.innerText = "Hello,Friends!";
+            signuph3.innerText = "Enter your personal details and start journey with us";
+            signinbtn.innerText = "SIGN IN";
+            signupbtn.innerText = "SIGN UP";
+            signup1.transition = "2s";
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
